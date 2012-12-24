@@ -17,12 +17,12 @@
         float: left;
       }
       .dc-ico {
-        width: 14px;
+        width: 15px;
         height: 15px;
         margin-top: -1px;
         margin-right: 4px;
         vertical-align: middle;
-        background-image: url('http://s.discogss.com/images/record16.ico');
+        background-image: url('assets/img/disc.png');
         background-repeat: no-repeat;
         background-position: 0 0;
       }
@@ -75,11 +75,10 @@
       .dc-btn:hover .dc-ico,
       .dc-btn:focus .dc-ico,
       .dc-btn:active .dc-ico {
-        background-position: -25px 0;
+        background-position: -16px 0;
       }
       .dc-count {
         position: relative;
-        display: none; /* hidden to start */
         margin-left: 4px;
         background-color: #fafafa;
         border: 1px solid #d4d4d4;
@@ -190,7 +189,6 @@
         counter.innerHTML = obj.data.num_collection;
         button.href = 'http://www.discogs.com/collection?user=' + user
         counter.href = 'http://www.discogs.com/collection?user=' + user
-        counter.style.display = 'block';
       }
         
     </script>
