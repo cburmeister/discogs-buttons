@@ -51,20 +51,19 @@
       .dc-btn:hover,
       .dc-btn:focus,
       .dc-btn:active {
-        color: #fff;
+        color: #333;
         text-decoration: none;
-        text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-        border-color: #518cc6 #518cc6 #2a65a0;
-        background-color: #3072b3;
+        border-color: #d4d4d4;
+        background-color: #e8f042;
       }
       .dc-btn:hover,
       .dc-btn:focus {
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
-        background-image: -webkit-linear-gradient(#599bdc, #3072b3);
-        background-image: -moz-linear-gradient(top, #599bdc, #3072b3);
-        background-image: -ms-linear-gradient(#599bdc, #3072b3);
-        background-image: -o-linear-gradient(#599bdc, #3072b3);
-        background-image: linear-gradient(#599bdc, #3072b3);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e8f042), to(#e8f042));
+        background-image: -webkit-linear-gradient(#e8f042 0%, #e8f042 100%);
+        background-image: -moz-linear-gradient(top, #e8f042, #e8f042);
+        background-image: -ms-linear-gradient(#e8f042, #e8f042);
+        background-image: -o-linear-gradient(#e8f042, #e8f042);
+        background-image: linear-gradient(#e8f042, #e8f042);
       }
       .dc-btn:active {
         background-image: none;
@@ -75,7 +74,7 @@
       .dc-btn:hover .dc-ico,
       .dc-btn:focus .dc-ico,
       .dc-btn:active .dc-ico {
-        background-position: -16px 0;
+        background-position: 0 0;
       }
       .dc-count {
         position: relative;
@@ -85,7 +84,7 @@
       }
       .dc-count:hover,
       .dc-count:focus {
-        color: #4183C4;
+        color: #e8f042;
       }
       .dc-count:before,
       .dc-count:after {
@@ -156,20 +155,29 @@
     </span>
     <script type="text/javascript">
     
-      // Read a page's GET URL variables and return them as an associative array.
-      // Source: http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
+      // Read a page's GET URL variables and return them as an associative array
       var params = function () {
+      
         var vars = [], hash;
         var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      
         for(var i = 0; i < hashes.length; i++) {
           hash = hashes[i].split('=');
           vars.push(hash[0]);
           vars[hash[0]] = hash[1];
         }
+      
         return vars;
+      
       }()
       
+      // Add commas to numbers
+      function addCommas(n) {
+        return String(n).replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+      }
+      
       var user = params.user,
+          type = params.type,
           head = document.getElementsByTagName('head')[0],
           button = document.getElementById('dc-btn'),
           mainButton = document.getElementById('discogs-btn'),
@@ -177,18 +185,31 @@
           counter = document.getElementById('dc-count');
           
       function jsonp(path) {
+      
         var el = document.createElement('script');
         el.src = path + '?callback=callback';
         head.insertBefore(el, head.firstChild);
+      
       }
       
       jsonp('http://api.discogs.com/users/' + user);
       
       function callback(obj) {
-        text.innerHTML = user;
-        counter.innerHTML = obj.data.num_collection;
-        button.href = 'http://www.discogs.com/collection?user=' + user
-        counter.href = 'http://www.discogs.com/collection?user=' + user
+        
+        button.href = 'http://www.discogs.com/collection?user=' + user;
+        counter.href = 'http://www.discogs.com/collection?user=' + user;
+        
+        if(type == 'collection') {
+          counter.innerHTML = addCommas(obj.data.num_collection);
+          text.innerHTML = 'In Collection';
+        } else if(type == 'wantlist') {
+          counter.innerHTML = addCommas(obj.data.num_wantlist);
+          text.innerHTML = 'Wanted';
+        } else if(type == 'inventory') {
+          counter.innerHTML = addCommas(obj.data.num_for_sale);
+          text.innerHTML = 'For Sale';
+        }
+        
       }
         
     </script>
