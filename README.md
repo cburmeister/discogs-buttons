@@ -7,7 +7,8 @@ Usage
 
 
 ``` html
-<iframe src="discogs-btn.html?user=coreylechicago&type=collection&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="190" height="30"></iframe>
+<iframe src="discogs-btn.html?user=coreylechicago&type=collection&size=large" allowtransparency="true" 
+  frameborder="0" scrolling="0" width="190" height="30"></iframe>
 ```
 
 ### Parameters
