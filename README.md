@@ -1,5 +1,5 @@
 Discogs Social Buttons
-===============
+-----
 
 Display your Discogs profile on your website with these three simple social media buttons featuring dynamic collection, inventory, or want-list counts.
 
