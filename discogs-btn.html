@@ -1,150 +1,149 @@
 <html>
-<style type="text/css">
-      body {
-        padding: 0;
-        margin: 0;
-        font: bold 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-rendering: optimizeLegibility;
-        overflow: hidden;
-      }
-      .discogs-btn {
-        height: 20px;
-        overflow: hidden;
-      }
-      .dc-btn,
-      .dc-count,
-      .dc-ico {
-        float: left;
-      }
-      .dc-ico {
-        width: 15px;
-        height: 15px;
-        margin-top: -1px;
-        margin-right: 4px;
-        vertical-align: middle;
-        background-image: url('assets/img/disc.png');
-        background-repeat: no-repeat;
-        background-position: 0 0;
-      }
-      .dc-btn,
-      .dc-count {
-        padding: 2px 5px 2px 4px;
-        color: #555;
-        text-decoration: none;
-        text-shadow: 0 1px 0 #fff;
-        white-space: nowrap;
-        cursor: pointer;
-        border-radius: 3px;
-      }
-      .dc-btn {
-        background-color: #e6e6e6;
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#eaeaea));
-        background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
-        background-image: -moz-linear-gradient(top, #fafafa, #eaeaea);
-        background-image: -ms-linear-gradient(#fafafa, #eaeaea);
-        background-image: -o-linear-gradient(#fafafa, #eaeaea);
-        background-image: linear-gradient(#fafafa, #eaeaea);
-        background-repeat: no-repeat;
-        border: 1px solid #d4d4d4;
-        border-bottom-color: #bcbcbc;
-      }
-      .dc-btn:hover,
-      .dc-btn:focus,
-      .dc-btn:active {
-        color: #333;
-        text-decoration: none;
-        border-color: #d4d4d4;
-        background-color: #e8f042;
-      }
-      .dc-btn:hover,
-      .dc-btn:focus {
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e8f042), to(#e8f042));
-        background-image: -webkit-linear-gradient(#e8f042 0%, #e8f042 100%);
-        background-image: -moz-linear-gradient(top, #e8f042, #e8f042);
-        background-image: -ms-linear-gradient(#e8f042, #e8f042);
-        background-image: -o-linear-gradient(#e8f042, #e8f042);
-        background-image: linear-gradient(#e8f042, #e8f042);
-      }
-      .dc-btn:active {
-        background-image: none;
-        -webkit-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
-           -moz-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
-                box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
-      }
-      .dc-btn:hover .dc-ico,
-      .dc-btn:focus .dc-ico,
-      .dc-btn:active .dc-ico {
-        background-position: 0 0;
-      }
-      .dc-count {
-        position: relative;
-        margin-left: 4px;
-        background-color: #fafafa;
-        border: 1px solid #d4d4d4;
-      }
-      .dc-count:hover,
-      .dc-count:focus {
-        color: #e8f042;
-      }
-      .dc-count:before,
-      .dc-count:after {
-        content: ' ';
-        position: absolute;
-        display: inline-block;
-        width: 0;
-        heidct: 0;
-        border-color: transparent;
-        border-style: solid;
-      }
-      .dc-count:before {
-        top: 50%;
-        left: -3px;
-        margin-top: -4px;
-        border-width: 4px 4px 4px 0;
-        border-ridct-color: #fafafa;
-      }
-      .dc-count:after {
-        top: 50%;
-        left: -4px;
-        z-index: -1;
-        margin-top: -5px;
-        border-width: 5px 5px 5px 0;
-        border-right-color: #d4d4d4;
-      }
-      .discogs-btn-large {
-        height: 30px;
-      }
-      .discogs-btn-large .dc-btn,
-      .discogs-btn-large .dc-count {
-        padding: 3px 10px 3px 8px;
-        font-size: 16px;
-        line-height: 22px;
-        border-radius: 4px;
-      }
-      .discogs-btn-large .dc-ico {
-        width: 22px;
-        heidct: 23px;
-        background-position: 0 -20px;
-      }
-      .discogs-btn-large .dc-btn:hover .dc-ico,
-      .discogs-btn-large .dc-btn:focus .dc-ico,
-      .discogs-btn-large .dc-btn:active .dc-ico {
-        background-position: -25px -20px;
-      }
-      .discogs-btn-large .dc-count {
-        margin-left: 6px;
-      }
-      .discogs-btn-large .dc-count:before {
-        left: -5px;
-        margin-top: -6px;
-        border-width: 6px 6px 6px 0;
-      }
-      .discogs-btn-large .dc-count:after {
-        left: -6px;
-        margin-top: -7px;
-        border-width: 7px 7px 7px 0;
-      }
-    </style>
+  <style type="text/css">
+    body {
+      padding: 0;
+      margin: 0;
+      font: bold 11px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-rendering: optimizeLegibility;
+      overflow: hidden;
+    }
+    .discogs-btn {
+      height: 20px;
+      overflow: hidden;
+    }
+    .dc-btn,
+    .dc-count,
+    .dc-ico {
+      float: left;
+    }
+    .dc-ico {
+      width: 15px;
+      height: 15px;
+      margin-top: -1px;
+      margin-right: 4px;
+      vertical-align: middle;
+      background-image: url('assets/img/disc.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+    .dc-btn,
+    .dc-count {
+      padding: 2px 5px 2px 4px;
+      color: #555;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .dc-btn {
+      background-color: #e6e6e6;
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#eaeaea));
+      background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+      background-image: -moz-linear-gradient(top, #fafafa, #eaeaea);
+      background-image: -ms-linear-gradient(#fafafa, #eaeaea);
+      background-image: -o-linear-gradient(#fafafa, #eaeaea);
+      background-image: linear-gradient(#fafafa, #eaeaea);
+      background-repeat: no-repeat;
+      border: 1px solid #d4d4d4;
+      border-bottom-color: #bcbcbc;
+    }
+    .dc-btn:hover,
+    .dc-btn:focus,
+    .dc-btn:active {
+      color: #333;
+      text-decoration: none;
+      border-color: #d4d4d4;
+      background-color: #e8f042;
+    }
+    .dc-btn:hover,
+    .dc-btn:focus {
+      background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ddc425), to(#ddc425));
+      background-image: -webkit-linear-gradient(#ddc425 0%, #ddc425 100%);
+      background-image: -moz-linear-gradient(top, #ddc425, #ddc425);
+      background-image: -ms-linear-gradient(#ddc425, #ddc425);
+      background-image: -o-linear-gradient(#ddc425, #ddc425);
+      background-image: linear-gradient(#ddc425, #ddc425);
+    }
+    .dc-btn:active {
+      background-image: none;
+      -webkit-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
+         -moz-box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
+              box-shadow: inset 0 2px 5px rgba(0,0,0,.10);
+    }
+    .dc-btn:hover .dc-ico,
+    .dc-btn:focus .dc-ico,
+    .dc-btn:active .dc-ico {
+      background-position: 0 0;
+    }
+    .dc-count {
+      position: relative;
+      margin-left: 4px;
+      background-color: #fafafa;
+      border: 1px solid #d4d4d4;
+    }
+    .dc-count:hover,
+    .dc-count:focus {
+      color: #ddc425;
+    }
+    .dc-count:before,
+    .dc-count:after {
+      content: ' ';
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      heightt: 0;
+      border-color: transparent;
+      border-style: solid;
+    }
+    .dc-count:before {
+      top: 50%;
+      left: -3px;
+      margin-top: -4px;
+      border-width: 4px 4px 4px 0;
+      border-right-color: #fafafa;
+    }
+    .dc-count:after {
+      top: 50%;
+      left: -4px;
+      z-index: -1;
+      margin-top: -5px;
+      border-width: 5px 5px 5px 0;
+      border-right-color: #d4d4d4;
+    }
+    .discogs-btn-large {
+      height: 30px;
+    }
+    .discogs-btn-large .dc-btn,
+    .discogs-btn-large .dc-count {
+      padding: 3px 10px 3px 8px;
+      font-size: 16px;
+      line-height: 22px;
+      border-radius: 4px;
+    }
+    .discogs-btn-large .dc-ico {
+      width: 22px;
+      height: 23px;
+      background-position: 0 -17px;
+    }
+    .discogs-btn-large .dc-btn:hover .dc-ico,
+    .discogs-btn-large .dc-btn:focus .dc-ico,
+    .discogs-btn-large .dc-btn:active .dc-ico {
+      background-position: 0 -17px;
+    }
+    .discogs-btn-large .dc-count {
+      margin-left: 6px;
+    }
+    .discogs-btn-large .dc-count:before {
+      left: -5px;
+      margin-top: -6px;
+      border-width: 6px 6px 6px 0;
+    }
+    .discogs-btn-large .dc-count:after {
+      left: -6px;
+      margin-top: -7px;
+      border-width: 7px 7px 7px 0;
+    }
+  </style>
   <body>
     <span class="discogs-btn" id="discogs-btn">
       <a class="dc-btn" id="dc-btn" href="#" target="_blank">
@@ -178,6 +177,7 @@
       
       var user = params.user,
           type = params.type,
+          size = params.size,
           head = document.getElementsByTagName('head')[0],
           button = document.getElementById('dc-btn'),
           mainButton = document.getElementById('discogs-btn'),
@@ -210,6 +210,11 @@
           text.innerHTML = 'For Sale';
         }
         
+      }
+      
+      // Change the size
+      if (size == 'large') {
+        mainButton.className += ' discogs-btn-large';
       }
         
     </script>
