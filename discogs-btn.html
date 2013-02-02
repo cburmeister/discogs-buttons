@@ -196,16 +196,19 @@
       
       function callback(obj) {
         
-        button.href = 'http://www.discogs.com/collection?user=' + user;
-        counter.href = 'http://www.discogs.com/collection?user=' + user;
-        
         if(type == 'collection') {
+          button.href = 'http://www.discogs.com/collection?user=' + user;
+          counter.href = 'http://www.discogs.com/collection?user=' + user;
           counter.innerHTML = addCommas(obj.data.num_collection);
           text.innerHTML = 'In Collection';
         } else if(type == 'wantlist') {
+          button.href = 'http://www.discogs.com/wantlist?user=' + user;
+          counter.href = 'http://www.discogs.com/wantlist?user=' + user;
           counter.innerHTML = addCommas(obj.data.num_wantlist);
           text.innerHTML = 'Wanted';
         } else if(type == 'inventory') {
+          button.href = 'http://www.discogs.com/seller/' + user;
+          counter.href = 'http://www.discogs.com/seller/' + user;
           counter.innerHTML = addCommas(obj.data.num_for_sale);
           text.innerHTML = 'For Sale';
         }
