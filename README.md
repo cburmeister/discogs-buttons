@@ -9,7 +9,7 @@ media buttons featuring dynamic collection, inventory, or want-list counts.
 ## Usage
 
 ```html
-<iframe src="http://discogs.coreyburmeister.com/discogs-btn.html?user=cburmeister&type=collection&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="190" height="30"></iframe>
+<iframe src="http://coreyburmeister.com/discogs-buttons/discogs-btn.html?user=cburmeister&type=collection&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="190" height="30"></iframe>
 ```
 
 ### Parameters
